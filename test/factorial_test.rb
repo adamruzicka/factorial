@@ -7,7 +7,15 @@ class FactorialTest < Minitest::Test
     refute_nil ::Factorial::VERSION
   end
 
-  def test_it_does_something_useful
-    assert false
+  def test_it_calculates_factorial_of_1
+    assert_equal 1, Factorial.factorial(1)
+  end
+
+  def test_it_calculates_factorial_of_5
+    assert_equal 120, Factorial.factorial(5)
+  end
+
+  def test_it_calculates_factorial_of_7
+    assert_equal 5040, Factorial.factorial(7)
   end
 end
